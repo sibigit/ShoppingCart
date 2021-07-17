@@ -24,12 +24,11 @@ export default class AnimatedList extends React.Component {
                     <View style={styles.singleColumnItem}>
                         <Image
                             style={{ width: DEVICE_WIDTH, height: DEVICE_HEIGHT, backgroundColor: 'white' }}
-                            source={{ uri: "https://www.incimages.com/uploaded_files/image/1920x1080/getty_507716250_226806.jpg" }}
+                            source={{ uri: item.image }}
                         />
-                        <Text style={styles.itemText}>{this.props.slideerValue}</Text>
-                        <Text style={styles.itemText}>{item.arrival}</Text>
-                        <Text style={styles.itemText}>{item.price}</Text>
-                        <Text style={styles.itemText}>{this.props.slideerValue}</Text>
+                        <Text numberOfLines={1} style={styles.itemText}>{item.arrival}</Text>
+                        <Text numberOfLines={1} style={styles.itemText}>{item.name}</Text>
+                        <Text numberOfLines={1} style={styles.itemText}>{item.price}</Text>
                     </View>
                 )}
 
@@ -37,11 +36,11 @@ export default class AnimatedList extends React.Component {
                     <View style={styles.twoColumnItem}>
                         <Image
                             style={{ width: DEVICE_WIDTH / 2.10, height: DEVICE_HEIGHT / 1.1, backgroundColor: 'white' }}
-                            source={{ uri: "https://www.incimages.com/uploaded_files/image/1920x1080/getty_507716250_226806.jpg" }}
+                            source={{ uri: item.image }}
                         />
-                        <Text style={styles.itemText}>{this.props.slideerValue}</Text>
-                        <Text style={styles.itemText}>{item.arrival}</Text>
-                        <Text style={styles.itemText}>{item.price}</Text>
+                        <Text numberOfLines={1} style={[styles.itemText,{width:DEVICE_WIDTH / 2.10}]}>{item.arrival}</Text>
+                        <Text numberOfLines={1} style={[styles.itemText,{width:DEVICE_WIDTH / 2.10}]}>{item.name}</Text>
+                        <Text numberOfLines={1} style={[styles.itemText,{width:DEVICE_WIDTH / 2.10}]}>{item.price}</Text>
                     </View>
                 )}
 
@@ -49,11 +48,11 @@ export default class AnimatedList extends React.Component {
                     <View style={styles.ThreeColumnItem}>
                         <Image
                             style={{ width: DEVICE_WIDTH / 3.25, height: DEVICE_HEIGHT / 1.1, backgroundColor: 'white' }}
-                            source={{ uri: "https://www.incimages.com/uploaded_files/image/1920x1080/getty_507716250_226806.jpg" }}
+                            source={{ uri: item.image }}
                         />
-                        <Text style={styles.itemText}>{this.props.slideerValue}</Text>
-                        <Text style={styles.itemText}>{item.arrival}</Text>
-                        <Text style={styles.itemText}>{item.price}</Text>
+                        <Text numberOfLines={1} style={[styles.itemText,{width:DEVICE_WIDTH / 3.25}]}>{item.arrival}</Text>
+                        <Text numberOfLines={1} style={[styles.itemText,{width:DEVICE_WIDTH / 3.25}]}>{item.name}</Text>
+                        <Text numberOfLines={1} style={[styles.itemText,{width:DEVICE_WIDTH / 3.25}]}>{item.price}</Text>
                     </View>
                 )}
 
@@ -61,7 +60,7 @@ export default class AnimatedList extends React.Component {
                     <View style={styles.FourColumnItem}>
                         <Image
                             style={{ width: DEVICE_WIDTH / 4.55, height: DEVICE_HEIGHT / 2.1, backgroundColor: 'white' }}
-                            source={{ uri: "https://www.incimages.com/uploaded_files/image/1920x1080/getty_507716250_226806.jpg" }}
+                            source={{ uri: item.image }}
                         />
                     </View>
                 )}
@@ -114,7 +113,7 @@ const styles = StyleSheet.create({
         margin: '2.5%',
     },
     itemText: {
-        fontSize: 20,
+        fontSize: 14,
         marginLeft: "2%",
         marginTop: "1%",
         textAlign: 'left',
